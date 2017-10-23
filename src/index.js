@@ -3,6 +3,13 @@ let $ = require('jquery')
 $(document).ready(function() {
   topWordAndCount()
   $('button').on('click', breakDown)
+  $('textarea').keydown(function(e) {
+    if(e.which == 13) {
+      breakDown()
+      $(this).val('').focus()
+      return false
+    }
+  })
 })
 
 function topWordAndCount() {
