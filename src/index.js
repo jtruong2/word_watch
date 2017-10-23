@@ -17,7 +17,17 @@ function topWordAndCount() {
 }
 
 function breakDown() {
-  let text = $('textarea').val()
+  let text = $('textarea').val().toLowerCase()
   let listOfWords = text.split(' ')
-  $('article.word-count').append(`<p>${text}</p>`)
+  let wordsWithWeight = {}
+  listOfWords.forEach(function(word) {
+    if(wordsWithWeight.hasOwnProperty(word)){
+      wordsWithWeight[word] += 1
+    } else {
+      wordsWithWeight[word] = 1
+    }
+  })
+  for(var key in wordsWithWeight) {
+    $('article.word-count').append(`<font size="${wordsWithWeight[key]}">${key}</font>`)
+  }
 }
