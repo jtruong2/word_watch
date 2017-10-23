@@ -75,10 +75,11 @@ module.exports = __webpack_require__(2);
 /* 1 */
 /***/ (function(module, exports) {
 
-document.addEventListener("DOMContentLoaded", () => {
-  // have fun!
+// document.addEventListener("DOMContentLoaded", () => {
+// })
+$(document).ready(function() {
+  $('.top-word').append('<p>test<p>')
 })
-
 
 
 /***/ }),
