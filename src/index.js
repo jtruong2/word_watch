@@ -28,6 +28,6 @@ function breakDown() {
     }
   })
   for(var key in wordsWithWeight) {
-    $('article.word-count').append(`<font size="${wordsWithWeight[key]}">${key}</font>`)
+    $('article.word-count').append(`<font size="${wordsWithWeight[key]}">${key}</font><pre>  </pre>`)
   }
 }
